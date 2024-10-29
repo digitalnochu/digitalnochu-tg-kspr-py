@@ -118,14 +118,20 @@ NOTE:
 example	
 ```python	
     /mint           # runs on bots specified in .env file when you enter KRCtoken name, minting times, and gas fee
-	/mint 3-5       # runs only on bots 3-5 when you enter KRCtoken name, minting times, and gas fee
+    /mint 3-5       # runs only on bots 3-5 when you enter KRCtoken name, minting times, and gas fee
 ```
 
-## Limitations						
-1. Try not to execute "other commands" inside /mint. or any other commands not related to /mint.		
+## Limitations	
+1. This is only limited to KSPR Bots 1-10 at the moment.
+   
+2. Try not to execute "other commands" inside /mint. or any other commands not related to /mint.		
 **For example**, avoid running "change account" while inside "/mint" command. best to run "cancel" first before running other commands						
 								
-2. Ensure you are replying your answer to the correct question. Instructions per command are added to keep you in track. Replying incorrectly may cause potential errors.						
+3. Ensure you are replying your answer to the correct question. Instructions per command are added to keep you in track. Replying incorrectly may cause potential errors.						
 **Example** instruction includes "Enter command", "Which KRC20 Token...", "How many times..."						
 								
-3. Simultaneously monitor telegram updates vs. command prompt updates. To make sure you can resolve any issues that arises.	
+4. Simultaneously monitor telegram updates vs. command prompt updates. To make sure you can resolve any issues that arises.
+
+\
+\
+Footnote: _This project is still evolving, with plans to introduce more commands like /send, /transfer, and beyond. It's just the beginning, and there's plenty of room to expand and scale up with more versatile, large-scale features in the future. The possibilities are limitless!_
