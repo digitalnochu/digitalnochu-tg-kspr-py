@@ -4,7 +4,7 @@ This Python project was developed as a conceptual idea to provide simplified con
 **Disclaimer**: it is essential to understand that this project is not 100% foolproof and may still contain unresolved issues or limitations. While efforts have been made to ensure functionality, users should exercise caution and be prepared for potential bugs or unanticipated behaviors. This application is intended for use as-is, with no guarantees of complete reliability.
 
 - Idealized: _Oct 26, 2024_
-- Developed: _Oct 28, 2024_
+- Developed: _Oct 27, 2024_
 - First Official Run: _Oct 29, 2024_
 
 
@@ -16,7 +16,7 @@ This Python project was developed as a conceptual idea to provide simplified con
     pip install telethon
 ```
 ```bash
-    pip install pyton-dotenv
+    pip install phyton-dotenv
 ```
 
 ### Step 2: Application setup
@@ -94,7 +94,7 @@ Command Syntax
 exit                # exit python run
 cancel              # can cancel everywhere. returns to "Enter command"
 change account      # change active telegram user
-change range		# change active default bot numbers
+change range	    # change active default bot numbers
 bot range           # check active default bot numbers
 ```
 
