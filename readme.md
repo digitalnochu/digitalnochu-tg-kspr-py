@@ -20,8 +20,8 @@ This Python project was developed as a conceptual idea to provide simplified con
 ```
 
 ### Step 2: Application setup
-3. You need to register your phone, create an application and grab the APP ID and APP Hash from the official App of Telegram here: https://my.telegram.org/apps
-4. Open the projects .env and enter your app details correctly.
+1. You need to register your phone, create an application and grab the APP ID and APP Hash from the official App of Telegram here: https://my.telegram.org/apps
+2. Open the projects .env and enter your app details correctly.
 ```bash
 user_NAME=username
 user_API_ID=11111111
@@ -37,7 +37,8 @@ user_BOTS=1-10
 ```
 or
 ```bash
-    python pv7.py # run this if you want to command /mint in one-line. see Usage section below.
+    # run this if you want to command /mint in one-line. see Usage section below.
+    python pv7.py 
 ```
 
 ## Adding more accounts
@@ -51,7 +52,7 @@ as well as a line of code that says
 ```python
 if account_choice not in ["username"]:
 ```
-If you will add more accounts, be sure to update this *code block* and the *.env file*. Making sure both files are correct. Example below:
+If you will add more accounts, be sure to update this *code block* and the *.env file*. Making sure both code blocks are one and same. Example below:
 
 ```python
 # in .env file
@@ -85,16 +86,19 @@ Command Syntax
 <command> <optional: bot number or bot range>
 ```
 
-Sepcific command Syntax of /mint when using pv7.py
+Specific command Syntax of /mint when using pv7.py
 ```bash
 /mint <ticker_name> <how_many_times_to_mint> <custom_gas_fee>
+
 # example: /mint kaspy 100 1.7
+# at the moment, you can't declare bot range in this syntax. So /mint command will default to use the bot range declared in .env file
 ```
 
 ## Main Commands
 ```python
 /balance
-/mint
+/mint (+1 optional parameter)   # pv6.py
+/mint (+3 parameters)           #pv7.py
 /marketplace
 /mylistings
 ```
