@@ -4,7 +4,7 @@ This Python project was developed as a conceptual idea to provide simplified con
 **Disclaimer**: it is essential to understand that this project is not 100% foolproof and may still contain unresolved issues or limitations. While efforts have been made to ensure functionality, users should exercise caution and be prepared for potential bugs or unanticipated behaviors. This application is intended for use as-is, with no guarantees of complete reliability.
 
 - Idealized: _Oct 26, 2024_
-- Developed: _Oct 28, 2024_
+- Developed: _Oct 27, 2024_
 - First Official Run: _Oct 29, 2024_
 
 
@@ -16,7 +16,7 @@ This Python project was developed as a conceptual idea to provide simplified con
     pip install telethon
 ```
 ```bash
-    pip install pyton-dotenv
+    pip install python-dotenv
 ```
 
 ### Step 2: Application setup
@@ -35,9 +35,13 @@ user_BOTS=1-10
 ```bash
     python pv6.py
 ```
+or
+```bash
+    python pv7.py # run this if you want to command /mint in one-line. see Usage section below.
+```
 
 ## Adding more accounts
-Inside the pv6.py file, you will find the accounts variable holding an array of each account details.
+Inside the pv6.py/pv7.py file, you will find the accounts variable holding an array of each account details.
 ```python
 accounts = [
     { "name": os.getenv("user_NAME"), "api_id": os.getenv("user_API_ID"), "api_hash": os.getenv("user_API_HASH"), "phone": os.getenv("user_PHONE"), "bot_range": os.getenv("user_BOTS") }
@@ -63,13 +67,13 @@ user2_API_HASH=1234567890asdfghjkl
 user2_PHONE=+639222222222
 user2_BOTS=1-10
 
-# pv6.py line #22
+# pv6.py / pv7.py line #22
 accounts = [
     { "name": os.getenv("user_NAME"), "api_id": os.getenv("user_API_ID"), "api_hash": os.getenv("user_API_HASH"), "phone": os.getenv("user_PHONE"), "bot_range": os.getenv("user_BOTS") },
     { "name": os.getenv("user2_NAME"), "api_id": os.getenv("user2_API_ID"), "api_hash": os.getenv("user2_API_HASH"), "phone": os.getenv("user2_PHONE"), "bot_range": os.getenv("user2_BOTS") }
 ]
 
-# pv6.py line 119
+# pv6.py line 119 / pv7.py line 143
 if account_choice not in ["username","username2"]:
 ```
 
@@ -79,6 +83,12 @@ if account_choice not in ["username","username2"]:
 Command Syntax
 ```bash
 <command> <optional: bot number or bot range>
+```
+
+Sepcific command Syntax of /mint when using pv7.py
+```bash
+/mint <ticker_name> <how_many_times_to_mint> <custom_gas_fee>
+# example: /mint kaspy 100 1.7
 ```
 
 ## Main Commands
@@ -94,7 +104,7 @@ Command Syntax
 exit                # exit python run
 cancel              # can cancel everywhere. returns to "Enter command"
 change account      # change active telegram user
-change range		# change active default bot numbers
+change range	    # change active default bot numbers
 bot range           # check active default bot numbers
 ```
 
@@ -118,14 +128,20 @@ NOTE:
 example	
 ```python	
     /mint           # runs on bots specified in .env file when you enter KRCtoken name, minting times, and gas fee
-	/mint 3-5       # runs only on bots 3-5 when you enter KRCtoken name, minting times, and gas fee
+    /mint 3-5       # runs only on bots 3-5 when you enter KRCtoken name, minting times, and gas fee
 ```
 
-## Limitations						
-1. Try not to execute "other commands" inside /mint. or any other commands not related to /mint.		
+## Limitations	
+1. This is only limited to KSPR Bots 1-10 at the moment.
+   
+2. Try not to execute "other commands" inside /mint. or any other commands not related to /mint.		
 **For example**, avoid running "change account" while inside "/mint" command. best to run "cancel" first before running other commands						
 								
-2. Ensure you are replying your answer to the correct question. Instructions per command are added to keep you in track. Replying incorrectly may cause potential errors.						
+3. Ensure you are replying your answer to the correct question. Instructions per command are added to keep you in track. Replying incorrectly may cause potential errors.						
 **Example** instruction includes "Enter command", "Which KRC20 Token...", "How many times..."						
 								
-3. Simultaneously monitor telegram updates vs. command prompt updates. To make sure you can resolve any issues that arises.	
+4. Simultaneously monitor telegram updates vs. command prompt updates. To make sure you can resolve any issues that arises.
+
+\
+\
+Footnote: _This project is still evolving, with plans to introduce more commands like /send, /transfer, and beyond. It's just the beginning, and there's plenty of room to expand and scale up with more versatile, large-scale features in the future. The possibilities are limitless!_
