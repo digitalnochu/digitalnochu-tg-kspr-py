@@ -16,7 +16,7 @@ This Python project was developed as a conceptual idea to provide simplified con
     pip install telethon
 ```
 ```bash
-    pip install python-dotenv
+    pip install pyton-dotenv
 ```
 
 ### Step 2: Application setup
@@ -140,8 +140,4 @@ example
 3. Ensure you are replying your answer to the correct question. Instructions per command are added to keep you in track. Replying incorrectly may cause potential errors.						
 **Example** instruction includes "Enter command", "Which KRC20 Token...", "How many times..."						
 								
-4. Simultaneously monitor telegram updates vs. command prompt updates. To make sure you can resolve any issues that arises.
-
-\
-\
-Footnote: _This project is still evolving, with plans to introduce more commands like /send, /transfer, and beyond. It's just the beginning, and there's plenty of room to expand and scale up with more versatile, large-scale features in the future. The possibilities are limitless!_
+3. Simultaneously monitor telegram updates vs. command prompt updates. To make sure you can resolve any issues that arises.	

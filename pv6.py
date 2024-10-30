@@ -89,7 +89,7 @@ async def main():
     last_command = None  # Variable to keep track of the last command sent
 
     while True:
-        print("\nEnter /start to start aranochu-py")
+        print("\nEnter /start to start digitalnochu-py")
         start_command = input(create_prompt("")).strip().lower()  # Arrow for input prompt
 
         command_status = check_user_command(start_command)
