@@ -6,6 +6,7 @@ This Python project was developed as a conceptual idea to provide simplified con
 - Idealized: _Oct 26, 2024_
 - Developed: _Oct 27, 2024_
 - First Official Run: _Oct 29, 2024_
+- Number of official runs by dev as of Oct 2024: _2 runs. 60 bots/run_
 
 
 ## Installation
@@ -16,7 +17,7 @@ This Python project was developed as a conceptual idea to provide simplified con
     pip install telethon
 ```
 ```bash
-    pip install pyton-dotenv
+    pip install python-dotenv
 ```
 
 ### Step 2: Application setup
@@ -98,7 +99,7 @@ Specific command Syntax of /mint when using pv7.py
 ```python
 /balance
 /mint (+1 optional parameter)   # pv6.py
-/mint (+3 parameters)           #pv7.py
+/mint (+3 parameters)           # pv7.py
 /marketplace
 /mylistings
 ```
