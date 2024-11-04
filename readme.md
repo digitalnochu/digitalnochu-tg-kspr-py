@@ -6,7 +6,7 @@ This Python project was developed as a conceptual idea to provide simplified con
 - Idealized: _Oct 26, 2024_
 - Developed: _Oct 27, 2024_
 - First Official Run: _Oct 29, 2024_
-- Number of official runs by dev as of Oct 2024: _2 runs. 60 bots/run_
+- Number of official runs by dev as of Nov 4 2024: _5 runs_
 
 
 ## Installation
@@ -41,6 +41,11 @@ or
     # run this if you want to command /mint in one-line. see Usage section below.
     python pv7.py 
 ```
+or
+```bash
+    # run this if you want to command /mint in one-line + apply to all accounts asynchronously. see Usage section below.
+    python pv8.py 
+```
 
 ## Adding more accounts
 Inside the pv6.py/pv7.py file, you will find the accounts variable holding an array of each account details.
@@ -69,13 +74,13 @@ user2_API_HASH=1234567890asdfghjkl
 user2_PHONE=+639222222222
 user2_BOTS=1-10
 
-# pv6.py / pv7.py line #22
+# pv6.py / pv7.py line #22 / pv8.py line #23
 accounts = [
     { "name": os.getenv("user_NAME"), "api_id": os.getenv("user_API_ID"), "api_hash": os.getenv("user_API_HASH"), "phone": os.getenv("user_PHONE"), "bot_range": os.getenv("user_BOTS") },
     { "name": os.getenv("user2_NAME"), "api_id": os.getenv("user2_API_ID"), "api_hash": os.getenv("user2_API_HASH"), "phone": os.getenv("user2_PHONE"), "bot_range": os.getenv("user2_BOTS") }
 ]
 
-# pv6.py line 119 / pv7.py line 143
+# pv6.py line 119 / pv7.py line 143 / pv8.py line 138
 if account_choice not in ["username","username2"]:
 ```
 
@@ -87,7 +92,7 @@ Command Syntax
 <command> <optional: bot number or bot range>
 ```
 
-Specific command Syntax of /mint when using pv7.py
+Specific command Syntax of /mint when using pv7.py and pv8.py
 ```bash
 /mint <ticker_name> <how_many_times_to_mint> <custom_gas_fee>
 
@@ -99,7 +104,7 @@ Specific command Syntax of /mint when using pv7.py
 ```python
 /balance
 /mint (+1 optional parameter)   # pv6.py
-/mint (+3 parameters)           # pv7.py
+/mint (+3 parameters)           # pv7.py, pv8.py
 /marketplace
 /mylistings
 ```
